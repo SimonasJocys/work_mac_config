@@ -16,17 +16,7 @@
       darwinConfigurations."simons-MacBook-Air" = nix-darwin.lib.darwinSystem {
         system = system;
         modules = [
-          ({ pkgs, ... }: {
-            environment.systemPackages = [
-              pkgs.vim
-              pkgs.alacritty
-            ];
-
-            nix.settings.experimental-features = "nix-command flakes";
-
-            system.configurationRevision = self.rev or self.dirtyRev or null;
-	    system.stateVersion = 6;
-          })
+          ./system/configuration.nix
         ];
       };
 

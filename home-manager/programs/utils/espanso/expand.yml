@@ -1,0 +1,136 @@
+matches:
+  - trigger: ";sjg"
+    replace: "simonasjocys@gmail.com"
+    label: "My email"
+
+  - trigger: ";sjn"
+    replace: "Simonas Jocys"
+    label: "My name"
+
+  - trigger: ";sjt"
+    replace: "simonas.jocys"
+    label: "simonas.jocys"
+
+# add word and enter?
+  - trigger: ";hgr"
+    replace: "history|grep $|$"
+    label:
+
+  - trigger: ";screen"
+    replace: "screen -r main"
+    label: "screen reattach"
+
+  - trigger: ";screen"
+    replace: "screen -S main"
+    label: "screen create main"
+
+# changed to work with nixos
+  - trigger: ";edit"
+    replace: "nano ~/Desktop/repos/nixos_config/home-manager/programs/utils/espanso/expand.yml"
+    label: "espanso edit expand.yml"
+
+  - trigger: ";trig"
+    replace: "\n  - trigger:\n    replace:\n    label:"
+    force_clipboard: true
+    label: "espanso trigger edit"
+
+  - trigger: ";mv"
+    replace: "mv -t dest file1 file2"
+    label: "mv/cp multiple"
+
+  - trigger: ";ex"
+    replace: "chmod +x filename"
+    label: "make file executable"
+
+  - triggers: ["| less", "|less"]
+    replace: "| less -S"
+    label: "less without wrapping"
+
+  - trigger: ";wifi"
+    replace: "nmcli -s -g 802-11-wireless-security.psk connection show DG-office"
+    label: "get wifi password with nmcli"
+
+  - trigger: ";sp"
+    replace: "df -H"
+    label: "show free space in system"
+
+  - trigger: ";deatach"
+    replace: "screen -D"
+    label: "screen deatach all"
+
+  - trigger: ";tt"
+    replace: "- [ ] "
+    label: "obsidian kanban fill"
+
+  - trigger: ";zip"
+    replace: "zip -r output.zip folder"
+    label: "zip folder"
+
+  - trigger: ";mkenv"
+    replace: "conda create --name MYNAME"
+    label: "create conda environment"
+
+  - trigger: ";size"
+    replace: "du -sh ./*"
+    label: "get size in linux systems"
+
+  - trigger: ";architecture"
+    replace: "dpkg --print-architecture"
+    label: "print system architecture"
+
+  - trigger: ";count"
+    replace: "ls -1 | wc -l"
+    label: "count file in linux dir"
+
+  - trigger: ";grep"
+    replace: "grep $|$ -A 2 | less -S"
+    label: "grep + addidional lines after hit"
+
+  - trigger: ";grep_b"
+    replace: "grep $|$ -B 2 | less -S"
+    label: "grep + addidional lines before hit"
+
+  - trigger: ";zz"
+    replace: "zellij"
+    label: "zellij"
+
+  - trigger: ";za"
+    replace: "zellij attach simono_main"
+    label: "zellij attach"
+
+  - trigger: ";zc"
+    replace: "zellij --session secondary"
+    label: "zellij create named session"
+
+  - trigger: ";zkill"
+    replace: "zellij kill-session"
+    label: "zellij kill named session"
+
+  - trigger: ";zdel"
+    replace: "zellij delete-session"
+    label: "zellij delete session"
+
+  - trigger: ";zka"
+    replace: "zellij kill-all-sessions"
+    label: "zellij kill all sessions"
+
+  - trigger: ";zda"
+    replace: "zellij delete-all-sessions"
+    label: "zellij delete all sessions"
+
+  - trigger: "zls"
+    replace: "zellij list-sessions"
+    label: "zellij list sessions"
+
+  - trigger: ";zconf"
+    replace: "nano ~/.config/zellij/config.kdl"
+    label: "open zellij config"
+
+# kitty changes characters to numbers - fix this 
+  - trigger: ";hms"
+    replace: "home-manager switch --flake ~/Desktop/repos/nixos_config#simon@simon-PC -b backup"
+    label: "home-manager switch"
+
+  - trigger: ";nix"
+    replace: "sudo nixos-rebuild switch --flake ~/Desktop/repos/nixos_config#simon-PC --impure"
+    label: "nixos switch"
