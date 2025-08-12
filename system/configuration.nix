@@ -11,6 +11,11 @@
     };
   };
   system.stateVersion = 6;
+
+  imports = [
+    ./homebrew
+    ];
+
   # Nix settings
   nix = {
     settings = {
