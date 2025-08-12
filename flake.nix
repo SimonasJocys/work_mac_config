@@ -7,9 +7,17 @@
     home-manager.url = "github:nix-community/home-manager";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    catppuccin.url = "github:catppuccin/nix";
+    nixvim = {
+    # url = "github:nix-community/nixvim/update/nixos-24.05";
+    # url = "github:nix-community/nixvim/update/main";
+    url = "github:nix-community/nixvim";
+    inputs.nixpkgs.follows = "nixpkgs";
+    # inputs.nixpkgs.follows = "nixpkgs-unstable";
+  };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-darwin, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, nix-darwin, nixvim, catppuccin, ... } @ inputs:
     let
       system = "aarch64-darwin";
     in {
@@ -28,6 +36,8 @@
           extraSpecialArgs = { inherit inputs self; };
           modules = [
             ./home-manager/home.nix
+            nixvim.homeManagerModules.nixvim
+            catppuccin.homeModules.catppuccin
           ];
         };
       };

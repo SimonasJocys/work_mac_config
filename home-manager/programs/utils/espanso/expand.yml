@@ -1,6 +1,6 @@
 matches:
-  - trigger: ";sjg"
-    replace: "simonasjocys@gmail.com"
+  - trigger: ";sja"
+    replace: "simonas.jocys@atrandi.com"
     label: "My email"
 
   - trigger: ";sjn"
@@ -128,9 +128,14 @@ matches:
 
 # kitty changes characters to numbers - fix this 
   - trigger: ";hms"
-    replace: "home-manager switch --flake ~/Desktop/repos/nixos_config#simon@simon-PC -b backup"
+    replace: "home-manager switch --flake ~/Desktop/repos/work_mac_config#simon@simons-MacBook-Air"
     label: "home-manager switch"
 
   - trigger: ";nix"
-    replace: "sudo nixos-rebuild switch --flake ~/Desktop/repos/nixos_config#simon-PC --impure"
+    replace: "sudo nixos-rebuild switch --flake ~/Desktop/repos/work_mac_config#simons-MacBook-Air --impure"
     label: "nixos switch"
+    
+  - trigger: ";aws"
+    replace: "262891513864"
+    label: "aws acc number"
+

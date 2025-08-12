@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, catppuccin, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -13,19 +13,37 @@
   imports = [
     ./programs/IDE/vscodium
     ./programs/IDE/nixvim
-    ./programs/shell/zsh
+    # ./programs/shell/zsh
+    ./programs/shell/ttyper
     ./programs/shell/alacrity
-    ./programs/shell/starship
-    ./programs/utils/alfred
+    # ./programs/shell/starship
+    # ./programs/utils/alfred
     ./programs/utils/obsidian
+    ./programs/utils/rofi
+
     ./programs/utils/git
-    ./programs/utils/fzf
+    ./programs/utils/aerospace
+
+    # ./programs/utils/fzf
     ./programs/utils/espanso
-    ./programs/utils/keepass
+    ./programs/utils/keepassxc
     ./programs/browsers/brave
     ./programs/browsers/firefox
-    ./programs/browsers/chromium
+    # ./programs/browsers/chromium #not working on macos
   ];
 
-  home.stateVersion = "25.11"; # Set this to the version you're starting with
+    nixpkgs = {
+    overlays = [];
+    config = {
+      allowUnfree = true;
+    };
+  };
+
+
+  catppuccin = {
+    flavor = "macchiato";
+    accent = "lavender";
+  };
+
+  home.stateVersion = "25.05"; # Set this to the version you're starting with
 }
