@@ -132,7 +132,7 @@ matches:
     label: "home-manager switch"
 
   - trigger: ";nix"
-    replace: "sudo nixos-rebuild switch --flake ~/Desktop/repos/work_mac_config#simons-MacBook-Air --impure"
+    replace: "sudo darwin-rebuild switch --flake ~/Desktop/repos/work_mac_config#simons-MacBook-Air --impure"
     label: "nixos switch"
     
   - trigger: ";aws"

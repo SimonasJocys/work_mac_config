@@ -3,7 +3,7 @@
 {
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
-    hello
+    # hello
   ];
   home = {
     username = "simon";
@@ -17,9 +17,8 @@
     ./programs/shell/ttyper
     ./programs/shell/alacrity
     # ./programs/shell/starship
-    # ./programs/utils/alfred
+    ./programs/utils/raycast
     ./programs/utils/obsidian
-    ./programs/utils/rofi
 
     ./programs/utils/git
     ./programs/utils/aerospace
