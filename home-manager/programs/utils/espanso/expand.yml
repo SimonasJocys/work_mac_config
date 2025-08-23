@@ -139,3 +139,50 @@ matches:
     replace: "262891513864"
     label: "aws acc number"
 
+  - trigger: ";dt"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y%m%d"
+
+  - trigger: ";gc"
+    replace: "nix-collect-garbage -d"
+    label: "nix collect garbage"
+
+    
+  - trigger: ";sshu"
+    replace: "ssh -i '~/.ssh/simonas_key_lenovo.pem' ubuntu@"
+    label: "ssh to EC2 instance with ubuntu user"
+
+  - trigger: ";hd"
+    replace: "zcat $|$ | head -n 12"
+    label: "first 12 lines of gzipped file"
+
+  - trigger: ";cp"
+    replace: "scp -i ~/.ssh/simonas_key_lenovo.pem ubuntu@ec2-18-197-144-194.eu-central-1.compute.amazonaws.com:/home/ubuntu/simonas/random/bSAG/bsag_external/data/Control_2_S1_R2_001_2M.fastq.gz Control_2_S1_R2_001_2M.fastq.gz"
+    label: "copy from ec2"
+
+  - trigger: ";sn"
+    replace: 'snakemake -s $|$ -c 16 --software-deployment-method apptainer --singularity-args "-B $HOME" -n'
+    label: "snakemake run"
+
+
+  - trigger: ";date"
+    replace: "{{mytime2}}"
+    vars:
+      - name: mytime2
+        type: date
+        params:
+          format: "%Y/%m/%d"
+    label: "date with expanded format"
+
+  - trigger: ";nx"
+    replace: "nextflow run main.nf -profile apptainer"
+    label: "nextflow run with params"
+
+
+  - trigger: ";dot"
+    replace: "~/Desktop/repos/work_mac_config"
+    label: "directory of dot files"

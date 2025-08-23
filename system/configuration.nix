@@ -33,7 +33,6 @@
 
   environment.systemPackages = [
      pkgs.vim
-     pkgs.alacritty
      ];
 
   # Add ability to use TouchID for sudo
@@ -158,15 +157,26 @@
       };
       dock = {
         autohide = false;
-        expose-animation-duration = 0.15;
+        expose-animation-duration = 0.01;
         show-recents = false;
         showhidden = true;
-        persistent-apps = [];
-        tilesize = 70;
+        persistent-apps = [ 
+          "/System/Applications/System Settings.app"
+          "/System/Applications/Launchpad.app"
+          "/Users/simon/Applications/Home Manager Apps/Obsidian.app"
+          "/Users/simon/Applications/Home Manager Apps/Brave Browser.app"
+          "/Users/simon/Applications/Home Manager Apps/Firefox.app"
+          "/Users/simon/Applications/Home Manager Apps/VSCodium.app"
+          "/Applications/Microsoft Outlook.app"
+          "/Applications/Microsoft Teams.app"
+          "/Users/simon/Applications/Home Manager Apps/Alacritty.app"
+           ];
+        tilesize = 40;
         wvous-bl-corner = 1;
         wvous-br-corner = 1;
         wvous-tl-corner = 1;
         wvous-tr-corner = 1;
+        mru-spaces = false;
       };
       screencapture = {
         location = "/Users/simon/Downloads/temp";
@@ -174,20 +184,20 @@
         disable-shadow = true;
       };
     };
-    keyboard = {
-      enableKeyMapping = true;
-      # Remap §± to ~
-      userKeyMapping = [
-        {#not working yet :(
-          HIDKeyboardModifierMappingDst = 30064771125;
-          HIDKeyboardModifierMappingSrc = 30064771172;
-        }
-      ];
-    };
+    # keyboard = {
+    #   enableKeyMapping = true;
+    #   # Remap §± to ~
+    #   userKeyMapping = [
+    #     {#not working yet :(
+    #       HIDKeyboardModifierMappingDst = 30064771125;
+    #       HIDKeyboardModifierMappingSrc = 30064771172;
+    #     }
+    #   ];
+    # };
     primaryUser = "simon";
   };
 
-  # Zsh configuration
+  # Zsh configuration - seems needed even if there is one on hm
   programs.zsh.enable = true;
 
   # Fonts configuration

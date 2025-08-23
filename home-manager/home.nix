@@ -13,15 +13,17 @@
   imports = [
     ./programs/IDE/vscodium
     ./programs/IDE/nixvim
-    # ./programs/shell/zsh
+    ./programs/shell/zsh
     ./programs/shell/ttyper
     ./programs/shell/alacrity
     # ./programs/shell/starship
-    ./programs/utils/raycast
+    # ./programs/utils/rofi #not working on mac :(
     ./programs/utils/obsidian
 
     ./programs/utils/git
     ./programs/utils/aerospace
+    ./programs/utils/shortcuts
+  
 
     # ./programs/utils/fzf
     ./programs/utils/espanso
