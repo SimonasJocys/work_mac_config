@@ -186,3 +186,9 @@ matches:
   - trigger: ";dot"
     replace: "~/Desktop/repos/work_mac_config"
     label: "directory of dot files"
+
+    
+  - trigger: ";cc"
+    replace: "clear \n" #https://github.com/espanso/espanso/issues/121
+    label: "clear the terminal (with enter at the end)"
+

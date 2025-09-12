@@ -9,7 +9,7 @@
 # move this to separate .yml file
   services.espanso.configs = {
     default = {
-      search_shortcut = "CTRL+SHIFT+SPACE"; #alt is option on macos, ctrl is command
+      search_shortcut = "META+SHIFT+SPACE"; #alt is option on macos, meta is command
       disable_x11_fast_inject =  true; #fixing kitty problem as per https://github.com/espanso/espanso/issues/281
     };
   };

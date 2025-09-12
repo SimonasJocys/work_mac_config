@@ -1,4 +1,4 @@
-{ config, pkgs, catppuccin, ... }:
+{ config, pkgs, catppuccin, lib, ... }:
 
 {
   programs.home-manager.enable = true;
@@ -22,7 +22,12 @@
 
     ./programs/utils/git
     ./programs/utils/aerospace
-    ./programs/utils/shortcuts
+    ./programs/utils/java
+    ./programs/utils/gitkraken
+    ./programs/utils/nh
+
+
+    # ./programs/utils/shortcuts
   
 
     # ./programs/utils/fzf
@@ -31,6 +36,10 @@
     ./programs/browsers/brave
     ./programs/browsers/firefox
     # ./programs/browsers/chromium #not working on macos
+
+
+
+
   ];
 
     nixpkgs = {

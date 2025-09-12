@@ -41,6 +41,17 @@
   # Passwordless sudo
   # security.sudo.extraConfig = "${userConfig.name}    ALL = (ALL) NOPASSWD: ALL";
 
+#   system.activationScripts.appShortcuts.text = ''
+
+#   # Get the console user's UID
+#   uid=$(id -u $(stat -f %Su /dev/console))
+
+#   # Run defaults as the logged-in user
+#   defaults write -g NSUserKeyEquivalents -dict-add "Minimize" "@~m"
+#   launchctl asuser "$uid" defaults write -g NSUserKeyEquivalents -dict-add "Save" "^S"
+#   /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+# '';
+
   # System settings
   system = {
     defaults = {
@@ -49,6 +60,12 @@
         NowPlaying = false;
       };
       CustomUserPreferences = {
+        NSUserKeyEquivalents = {
+          "Lock Screen" = "@^l";
+          # "Paste and Match Style" = "^$v";
+          "Paste and Match Style" = "^v";
+          "Save" = "^S";
+        };
         # "com.apple.symbolichotkeys" = {
         #   AppleSymbolicHotKeys = {
         #     "163" = {
@@ -114,13 +131,10 @@
         #   };
         # };
         NSGlobalDomain."com.apple.mouse.linear" = true;
-        NSUserKeyEquivalents = {
-          "Lock Screen" = "@^l";
-          # "Paste and Match Style" = "^$v";
-          "Paste and Match Style" = "^v";
-        };
+
       };
       NSGlobalDomain = {
+ 
         "com.apple.sound.beep.volume" = 0.000;
         AppleInterfaceStyle = "Dark";
         ApplePressAndHoldEnabled = false;
@@ -167,6 +181,7 @@
           "/Users/simon/Applications/Home Manager Apps/Brave Browser.app"
           "/Users/simon/Applications/Home Manager Apps/Firefox.app"
           "/Users/simon/Applications/Home Manager Apps/VSCodium.app"
+          "/Users/simon/Applications/Home Manager Apps/KeePassXC.app"
           "/Applications/Microsoft Outlook.app"
           "/Applications/Microsoft Teams.app"
           "/Users/simon/Applications/Home Manager Apps/Alacritty.app"
@@ -202,6 +217,8 @@
 
   # Fonts configuration
   fonts.packages = with pkgs; [
-    nerd-fonts.meslo-lg
+    # nerd-fonts.meslo-lg
+    nerd-fonts.jetbrains-mono
+
   ];
 }

@@ -10,6 +10,6 @@
 
     # Source aerospace config from the home-manager store
     home.file.".aerospace.toml".text = ''
-        start-at-login = true
+        start-at-login = false
     '';
 }
