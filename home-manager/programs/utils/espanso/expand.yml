@@ -131,9 +131,10 @@ matches:
     replace: "home-manager switch --flake ~/Desktop/repos/work_mac_config#simon@simons-MacBook-Air"
     label: "home-manager switch"
 
-  - trigger: ";nix"
-    replace: "sudo darwin-rebuild switch --flake ~/Desktop/repos/work_mac_config#simons-MacBook-Air --impure"
-    label: "nixos switch"
+# changed to nixhelper
+  # - trigger: ";nix"
+  #   replace: "sudo darwin-rebuild switch --flake ~/Desktop/repos/work_mac_config#simons-MacBook-Air --impure"
+  #   label: "nixos switch"
     
   - trigger: ";aws"
     replace: "262891513864"
@@ -151,6 +152,17 @@ matches:
     replace: "nix-collect-garbage -d"
     label: "nix collect garbage"
 
+  - trigger: ";clean"
+    replace: "nh clean all --ask"
+    label: "nh search"
+
+  - trigger: ";nix"
+    replace: "nh darwin switch --ask"
+    label: "nh search"
+
+  - trigger: ";search"
+    replace: "nh search "
+    label: "nix collect garbage"
     
   - trigger: ";sshu"
     replace: "ssh -i '~/.ssh/simonas_key_lenovo.pem' ubuntu@"
@@ -178,7 +190,7 @@ matches:
           format: "%Y/%m/%d"
     label: "date with expanded format"
 
-  - trigger: ";nx"
+  - trigger: ";nf"
     replace: "nextflow run main.nf -profile apptainer"
     label: "nextflow run with params"
 
