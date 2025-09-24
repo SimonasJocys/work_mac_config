@@ -103,7 +103,7 @@ in
 
 # since I cannot add plugins (with home-manager) to homebrew directory, resorting to creating symlinks. Seems to be working 
 # also since macos uses spaces in folders, note quotes for the paths 
-  home.activation.linkAlbertEspanso = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.link_albert_shortcuts = lib.hm.dag.entryAfter ["writeBoundary"] ''
   mkdir -p "${albert_espanso_brew}/${albert_plugin_dir}"
   ln -sf "${albert_home}/${albert_plugin_dir}/__init__.py" "${albert_espanso_brew}/${albert_plugin_dir}/__init__.py"
 '';
