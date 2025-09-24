@@ -25,6 +25,8 @@
     ./programs/utils/java
     ./programs/utils/gitkraken
     ./programs/utils/nh
+    ./programs/utils/albert
+
 
 
     # ./programs/utils/shortcuts

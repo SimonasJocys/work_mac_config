@@ -126,10 +126,11 @@ matches:
     replace: "nano ~/.config/zellij/config.kdl"
     label: "open zellij config"
 
-# kitty changes characters to numbers - fix this 
-  - trigger: ";hms"
-    replace: "home-manager switch --flake ~/Desktop/repos/work_mac_config#simon@simons-MacBook-Air"
-    label: "home-manager switch"
+# kitty changes characters to numbers - fix this
+# disabled in favor of nh
+  # - trigger: ";hms"
+  #   replace: "home-manager switch --flake ~/Desktop/repos/work_mac_config#simon@simons-MacBook-Air"
+  #   label: "home-manager switch"
 
 # changed to nixhelper
   # - trigger: ";nix"
@@ -157,7 +158,11 @@ matches:
     label: "nh search"
 
   - trigger: ";nix"
-    replace: "nh darwin switch --ask"
+    replace: "nh darwin switch ~/Desktop/repos/work_mac_config --ask"
+    label: "nh search"
+
+  - trigger: ";hms"
+    replace: "nh home switch ~/Desktop/repos/work_mac_config --ask" # can setup user with -c/configuration
     label: "nh search"
 
   - trigger: ";search"

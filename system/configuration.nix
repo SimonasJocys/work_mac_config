@@ -4,7 +4,7 @@
   ...
 }: {
 
-networking.hostName = "simons-MacBook-Air"
+networking.hostName = "simons-MacBook-Air";
 
 # from https://github.com/AlexNabokikh/nix-config/blob/master/modules/darwin/common/default.nix
   # Nixpkgs configuration
