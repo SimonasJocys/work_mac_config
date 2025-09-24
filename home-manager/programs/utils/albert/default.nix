@@ -1,9 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, lib, config,  ... }:
 let
-  AlbertShowEspanso = "/opt/homebrew/Caskroom/albert/0.31.1/Albert.app/Contents/Resources/python/plugins/albert_espanso/__init__.py";
+  albert_espanso_home = "${config.home.homeDirectory}/Library/Application Support/Albert/python/plugins/";
+#   point to specific version of albert - future updates will brake it 
+  albert_espanso_brew = "/opt/homebrew/Caskroom/albert/0.31.1/Albert.app/Contents/Resources/python/plugins/";
+  albert_espanso_dir = "espanso";
+
+
 in
 {
-  home.file."${AlbertShowEspanso}" = {
+  home.file."${albert_espanso_home}/${albert_espanso_dir}/__init__.py" = {
     # according to https://github.com/Mr-Aaryan/rofi-drun-search-web
     executable = true;
     text = ''
@@ -13,7 +18,7 @@ in
 
       md_iid = "3.0"
       md_version = "1.0"
-      md_name = "Espanso"
+      md_name = "espanso"
       md_description = "Browse and execute Espanso matches"
       md_license = "MIT"
       md_authors = ["you"]
@@ -95,4 +100,11 @@ in
 
     '';
   };
+
+# since I cannot add plugins (with home-manager) to homebrew directory, resorting to creating symlinks. Seems to be working 
+# also since macos uses spaces in folders, note quotes for the paths 
+  home.activation.linkAlbertEspanso = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  mkdir -p "${albert_espanso_brew}/${albert_espanso_dir}"
+  ln -sf "${albert_espanso_home}/${albert_espanso_dir}/__init__.py" "${albert_espanso_brew}/${albert_espanso_dir}/__init__.py"
+'';
 }
