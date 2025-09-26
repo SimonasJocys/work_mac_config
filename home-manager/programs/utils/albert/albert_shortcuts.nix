@@ -9,20 +9,29 @@ in
     executable = true;
     text = ''
       🛠️ System:
-      ▲ Ctrl + ↑ Shift + ⎵ Space  → Rofi (Espanso)
-      ▲ Ctrl + ↑ Shift + ?  → Rofi (Shortcuts)
-      ▲ Ctrl + ↑ Shift + b  → Rofi (Search on brave)
+      ▲ Ctrl + ↑ Shift + ⎵ Space  → Albert
       
-      🖥️ Window manager:
-      ▲ Ctrl + ⎇ Alt + ↑ Up  → Workspace selection screen
-      ▲ Ctrl + ⎇ Alt + ↓ Down  → Window selection screen
-      ⎇ Alt + ↹ Tab → Cycle through open windows
-      ↑ Shift + ⎇ Alt + ↹ Tab → Reverse Cycle through open windows
+      🖥️ Windows - Aerospace:     
+      ⎇ Alt + ↑Shift + f → toggle floating/tiling
+      ⎇ Alt + h/j/k/l → focus left,down,up,right
+      ⎇ Alt + ↑Shift + h/j/k/l → move left,down,up,right
 
       💻 Terminal:
 
       🐃 Gnu Screen:
       ▲ Ctrl + A + ✖ Esc
+
+
+      Old:
+      ⎇ Alt + ↹ Tab → Cycle through open windows
+      ↑ Shift + ⎇ Alt + ↹ Tab → Reverse Cycle through open windows
+      ▲ Ctrl + ⎇ Alt + H  → Snap window left
+      ▲ Ctrl + ⎇ Alt + L  →Snap window right
+      ▲ Ctrl + ⎇ Alt + Y  → Snap window top-left
+      ▲ Ctrl + ⎇ Alt + P  → Snap window top-right
+      ▲ Ctrl + ⎇ Alt + N  → Snap window bottom-left
+      ▲ Ctrl + ⎇ Alt + /  → Snap window bottom-right
+      ▲ Ctrl + ⎇ Alt + M  → Maximize window
     '';
   };
 

@@ -204,8 +204,15 @@ matches:
     replace: "~/Desktop/repos/work_mac_config"
     label: "directory of dot files"
 
-    
+  - trigger: ";update"
+    replace: "nix flake update"
+    label: "Update the fllake.lock (from directory of dot files)"
+
+
+  - trigger: ";ncl"
+    replace: "nh clean all"
+    label: "nix clean for all the users"
+
   - trigger: ";cc"
     replace: "clear \n" #https://github.com/espanso/espanso/issues/121
     label: "clear the terminal (with enter at the end)"
-

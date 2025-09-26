@@ -173,7 +173,7 @@ networking.hostName = "simons-MacBook-Air";
         _FXSortFoldersFirst = true;
       };
       dock = {
-        autohide = false;
+        autohide = true;
         expose-animation-duration = 0.01;
         show-recents = false;
         showhidden = true;

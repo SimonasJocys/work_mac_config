@@ -52,10 +52,11 @@
   };
 
 
-  catppuccin = {
-    flavor = "macchiato";
-    accent = "lavender";
-  };
+  # catppuccin = {
+  #   flavor = "macchiato";
+  #   accent = "lavender";
+  # };
+
 
   home.stateVersion = "25.05"; # Set this to the version you're starting with
 }

@@ -2,7 +2,10 @@
 
 {
   # move to separate file?
-  home.packages = [ pkgs.nil ];
+  home.packages = [ 
+    pkgs.nil
+    pkgs.vscodium
+     ];
 
   programs.vscode = {
     enable = true;
