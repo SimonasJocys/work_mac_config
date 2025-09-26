@@ -26,6 +26,7 @@
     ./programs/utils/gitkraken
     ./programs/utils/nh
     ./programs/utils/albert
+    ./programs/utils/karabiner
 
 
 
@@ -35,6 +36,8 @@
     # ./programs/utils/fzf
     ./programs/utils/espanso
     ./programs/utils/keepassxc
+
+
     ./programs/browsers/brave
     ./programs/browsers/firefox
     # ./programs/browsers/chromium #not working on macos
