@@ -41,6 +41,7 @@
     ./programs/browsers/brave
     ./programs/browsers/firefox
     # ./programs/browsers/chromium #not working on macos
+    ./programs/other/mamba
 
 
 

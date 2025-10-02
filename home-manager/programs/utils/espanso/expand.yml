@@ -170,7 +170,7 @@ matches:
     label: "nix collect garbage"
     
   - trigger: ";sshu"
-    replace: "ssh -i '~/.ssh/simonas_key_lenovo.pem' ubuntu@"
+    replace: "ssh -i '~/.ssh/simonas_mac.pem' ubuntu@"
     label: "ssh to EC2 instance with ubuntu user"
 
   - trigger: ";hd"
