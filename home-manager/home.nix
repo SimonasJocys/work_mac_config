@@ -41,7 +41,7 @@
     ./programs/browsers/brave
     ./programs/browsers/firefox
     # ./programs/browsers/chromium #not working on macos
-    ./programs/other/mamba
+    # ./programs/other/mamba #mamba does not want to work right out of the box, installing manually
 
 
 
