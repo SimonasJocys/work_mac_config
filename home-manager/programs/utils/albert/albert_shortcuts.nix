@@ -9,17 +9,31 @@ in
     executable = true;
     text = ''
       🛠️ System:
-      ▲ Ctrl + ↑ Shift + ⎵ Space  → Albert
+        ▲ Ctrl + ↑ Shift + ⎵ Space  → Albert
       
-      🖥️ Windows - Aerospace:     
-      ⎇ Alt + ↑Shift + f → toggle floating/tiling
-      ⎇ Alt + h/j/k/l → focus left,down,up,right
-      ⎇ Alt + ↑Shift + h/j/k/l → move left,down,up,right
+        🖥️ Windows - Aerospace:     
+        ⎇ Alt + ↑Shift + f → toggle floating/tiling
+        ⎇ Alt + h/j/k/l → focus left,down,up,right
+        ⎇ Alt + ↑Shift + h/j/k/l → move left,down,up,right
 
-      💻 Terminal:
+        ⎇ Alt + ↑Shift + m = ['join-with left', 'mode main']
+        ⎇ Alt + ↑Shift + ,(comma) = ['join-with down', 'mode main']
+        ⎇ Alt + ↑Shift + .(period) = ['join-with up', 'mode main']
+        ⎇ Alt + ↑Shift + /(slash) = ['join-with right', 'mode main']
 
-      🐃 Gnu Screen:
-      ▲ Ctrl + A + ✖ Esc
+        🏠 Workspaces - Aerospace:
+        alt-1 = 'workspace 1'
+        alt-shift-1 = 'move-node-to-workspace 1'
+        alt-tab = 'workspace-back-and-forth'
+
+        🛠️ Service mode - Aerospace:
+        ⎇ Alt + ↑Shift + ;(semicolon) = 'mode service'
+        ⎇ Alt + ↑Shift + h/j/k/l = ['join-with left/down/up/right', 'mode main']
+
+        💻 Terminal:
+
+        🐃 Gnu Screen:
+        ▲ Ctrl + A + ✖ Esc
 
 
       Old:

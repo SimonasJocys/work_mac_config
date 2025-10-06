@@ -132,6 +132,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-5 = 'move-node-to-workspace 5'
     alt-shift-6 = 'move-node-to-workspace 6'
 
+# do I need to keep mode main?
     alt-shift-m = ['join-with left', 'mode main']
     alt-shift-comma = ['join-with down', 'mode main']
     alt-shift-period = ['join-with up', 'mode main']
