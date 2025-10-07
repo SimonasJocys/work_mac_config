@@ -178,7 +178,7 @@ matches:
     label: "first 12 lines of gzipped file"
 
   - trigger: ";cp"
-    replace: "scp -i ~/.ssh/simonas_key_lenovo.pem ubuntu@ec2-18-197-144-194.eu-central-1.compute.amazonaws.com:/home/ubuntu/simonas/random/bSAG/bsag_external/data/Control_2_S1_R2_001_2M.fastq.gz Control_2_S1_R2_001_2M.fastq.gz"
+    replace: "scp -i ~/.ssh/simonas_macos.pem r2.fastq ubuntu@172.31.45.241:~/random"
     label: "copy from ec2"
 
   - trigger: ";sn"
