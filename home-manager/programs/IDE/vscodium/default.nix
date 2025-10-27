@@ -19,6 +19,11 @@
         "editor.fontSize" = 14;
         "terminal.integrated.fontFamily" = "'JetBrains Mono'";
         "terminal.integrated.fontSize" = 14;
+        "update.mode" = "none"; #fixing when tries to update and fails. annoying popup everytime
+        # "remote.SSH.syncConfiguration" = false;
+        # "remote.downloadExtensionsLocally" = true;
+        "workbench.colorTheme" = "One Dark Pro";
+        "remote.autoForwardPortsSource"= "hybrid"; #a bit shady, no?
       };
       keybindings = [
         {
