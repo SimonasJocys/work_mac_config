@@ -235,6 +235,7 @@ matches:
     replace: "aws ec2 describe-instances --instance-ids i-07a19971a869d7ab2 --query 'Reservations[*].Instances[*].PublicIpAddress' --output text"
     label: "get ec2 public IP for simonas small instance"
 
+# for simplicity just points to script. Maybe add autoenter with espanso (don't forget espanso restart)
   - trigger: ";ecr"
-    run: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/start_ec2.sh"
+    replace: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/start_ec2.sh"
     label: "run script that starts and ssh'es to simonas small ubuntu ec2 instance"
