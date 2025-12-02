@@ -239,3 +239,7 @@ matches:
   - trigger: ";ecr"
     replace: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/start_ec2.sh"
     label: "run script that starts and ssh'es to simonas small ubuntu ec2 instance"
+
+  - trigger: ";ecl"
+    replace: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/list_ec2.sh"
+    label: "run script that lists all running ec2 instances with Owner tag being SimonasJocys"
