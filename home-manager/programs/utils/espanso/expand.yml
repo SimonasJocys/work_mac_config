@@ -67,7 +67,7 @@ matches:
     label: "zip folder"
 
   - trigger: ";mkenv"
-    replace: "conda create --name MYNAME"
+    replace: "conda create --name"
     label: "create conda environment"
 
   - trigger: ";size"
@@ -170,12 +170,12 @@ matches:
     label: "nix collect garbage"
     
   - trigger: ";sshu"
-    replace: "ssh -i '~/.ssh/simonas_mac.pem' ubuntu@"
+    replace: "ssh -i '~/.ssh/simonas_macos.pem' ubuntu@172.31.45.241"
     label: "ssh to EC2 instance with ubuntu user"
 
   - trigger: ";hd"
     replace: "zcat $|$ | head -n 12"
-    label: "first 12 lines of gzipped file"
+    label: "first 12 lines of gzipped fastq/fasta file"
 
   - trigger: ";cp"
     replace: "scp -i ~/.ssh/simonas_macos.pem r2.fastq ubuntu@172.31.45.241:~/random"
@@ -216,3 +216,25 @@ matches:
   - trigger: ";cc"
     replace: "clear \n" #https://github.com/espanso/espanso/issues/121
     label: "clear the terminal (with enter at the end)"
+
+    
+  - trigger: ";kill"
+    replace: "pgrep -f $|$ | xargs -r sudo kill -9"
+    label: "kill all processes by name"
+
+    
+  - trigger: ";ecs"
+    replace: "aws ec2 start-instances --instance-ids i-07a19971a869d7ab2" #simonas small ubuntu
+    label: "start (simonas small) EC2 instance. Default region - eu-north-1 (Stockholm)"
+
+  - trigger: ";eck"
+    replace: "aws ec2 stop-instances --instance-ids i-07a19971a869d7ab2" #simonas small ubuntu
+    label: "start (simonas small) EC2 instance. Default region - eu-north-1 (Stockholm)"
+
+  - trigger: ";ecid"
+    replace: "aws ec2 describe-instances --instance-ids i-07a19971a869d7ab2 --query 'Reservations[*].Instances[*].PublicIpAddress' --output text"
+    label: "get ec2 public IP for simonas small instance"
+
+  - trigger: ";ecr"
+    run: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/start_ec2.sh"
+    label: "run script that starts and ssh'es to simonas small ubuntu ec2 instance"
