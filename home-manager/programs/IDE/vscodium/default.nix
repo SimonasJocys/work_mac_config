@@ -35,6 +35,7 @@
         # https://github.com/nix-community/vscode-nix-ide - check additional configurations for nix-ide
         jnoortheen.nix-ide
         mechatroner.rainbow-csv
+        GitHub.copilot
         # nextflow.nextflow
         # snakemake.snakemake-lang
         # yukina.yukinord
