@@ -27,7 +27,6 @@
     ./programs/utils/nh
     ./programs/utils/albert
     ./programs/utils/karabiner
-    ./programs/utils/copyq
 
 
 
