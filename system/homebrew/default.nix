@@ -20,7 +20,7 @@ homebrew = {
          "amethyst" 
          "redquits" 
          "aerospace"
-         "copyq"
+         "copyq" #needs some manual preferences configuration, for autostart
          ];  
 };
 }
