@@ -20,6 +20,7 @@ homebrew = {
          "amethyst" 
          "redquits" 
          "aerospace"
+         "copyq"
          ];  
 };
 }
