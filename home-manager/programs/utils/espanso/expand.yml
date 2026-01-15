@@ -34,13 +34,14 @@ matches:
     force_clipboard: true
     label: "espanso trigger edit"
 
-  - trigger: ";mv"
-    replace: "mv -t dest file1 file2"
-    label: "mv/cp multiple"
+# this is not correct? or atleast redundant?
+  # - trigger: ";mv"
+  #   replace: "mv -t dest file1 file2"
+  #   label: "mv/cp multiple"
 
-  - trigger: ";ex"
-    replace: "chmod +x filename"
-    label: "make file executable"
+  # - trigger: ";ex"
+  #   replace: "chmod +x filename"
+  #   label: "make file executable"
 
   - triggers: ["| less", "|less"]
     replace: "| less -S"
@@ -90,41 +91,41 @@ matches:
     replace: "grep $|$ -B 2 | less -S"
     label: "grep + addidional lines before hit"
 
-  - trigger: ";zz"
-    replace: "zellij"
-    label: "zellij"
+  # - trigger: ";zz"
+  #   replace: "zellij"
+  #   label: "zellij"
 
-  - trigger: ";za"
-    replace: "zellij attach simono_main"
-    label: "zellij attach"
+  # - trigger: ";za"
+  #   replace: "zellij attach simono_main"
+  #   label: "zellij attach"
 
-  - trigger: ";zc"
-    replace: "zellij --session secondary"
-    label: "zellij create named session"
+  # - trigger: ";zc"
+  #   replace: "zellij --session secondary"
+  #   label: "zellij create named session"
 
-  - trigger: ";zkill"
-    replace: "zellij kill-session"
-    label: "zellij kill named session"
+  # - trigger: ";zkill"
+  #   replace: "zellij kill-session"
+  #   label: "zellij kill named session"
 
-  - trigger: ";zdel"
-    replace: "zellij delete-session"
-    label: "zellij delete session"
+  # - trigger: ";zdel"
+  #   replace: "zellij delete-session"
+  #   label: "zellij delete session"
 
-  - trigger: ";zka"
-    replace: "zellij kill-all-sessions"
-    label: "zellij kill all sessions"
+  # - trigger: ";zka"
+  #   replace: "zellij kill-all-sessions"
+  #   label: "zellij kill all sessions"
 
-  - trigger: ";zda"
-    replace: "zellij delete-all-sessions"
-    label: "zellij delete all sessions"
+  # - trigger: ";zda"
+  #   replace: "zellij delete-all-sessions"
+  #   label: "zellij delete all sessions"
 
-  - trigger: "zls"
-    replace: "zellij list-sessions"
-    label: "zellij list sessions"
+  # - trigger: "zls"
+  #   replace: "zellij list-sessions"
+  #   label: "zellij list sessions"
 
-  - trigger: ";zconf"
-    replace: "nano ~/.config/zellij/config.kdl"
-    label: "open zellij config"
+  # - trigger: ";zconf"
+  #   replace: "nano ~/.config/zellij/config.kdl"
+  #   label: "open zellij config"
 
 # kitty changes characters to numbers - fix this
 # disabled in favor of nh
@@ -236,11 +237,11 @@ matches:
 # combining to multiple selections in gui
   - trigger: ";eck"
     replace: "aws ec2 stop-instances --instance-ids i-07a19971a869d7ab2" #simonas small ubuntu
-    label: "start (simonas small) EC2 instance. Default region - eu-north-1 (Stockholm)"
+    label: "kill (simonas small) EC2 instance. Default region - eu-north-1 (Stockholm)"
 
   - trigger: ";eck"
     replace: "aws ec2 stop-instances --instance-ids i-0a35a73104cba4afd" #simonas small ubuntu
-    label: "start (simonas large) EC2 instance. Default region - eu-north-1 (Stockholm)"
+    label: "kill (simonas large) EC2 instance. Default region - eu-north-1 (Stockholm)"
 
   - trigger: ";ecak" #ec-all-kill
     replace: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/kill_all_ec2.sh" #simonas small ubuntu
@@ -254,7 +255,7 @@ matches:
 
   - trigger: ";ecid"
     replace: "aws ec2 describe-instances --instance-ids i-0a35a73104cba4afd --query 'Reservations[*].Instances[*].PublicIpAddress' --output text"
-    label: "get ec2 public IP for simonas small instance"
+    label: "get ec2 public IP for simonas large instance"
 
 # EC2 run
 # for simplicity just points to script. Maybe add autoenter with espanso (don't forget espanso restart)
@@ -278,3 +279,11 @@ matches:
   - trigger: ";ecl"
     replace: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/list_ec2.sh"
     label: "run script that lists all running ec2 instances with Owner tag being SimonasJocys"
+
+  - trigger: ";in"
+    replace: "--include='*' --exclude='**' "
+    label: "for aws s3 sync: add include/exclude"
+
+  - trigger: ";dr`"
+    replace: "--dryrun"
+    label: "for aws s3 sync: add dryrun flag"

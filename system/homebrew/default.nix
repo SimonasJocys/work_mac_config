@@ -18,9 +18,9 @@ homebrew = {
     casks = [ # GUI or large binaries
         "albert"
          "amethyst" 
-         "redquits" 
+        #  "redquits" #do i really need that?
          "aerospace"
-         "copyq" #needs some manual preferences configuration, for autostart
+         "copyq" #needs some manual preferences configuration, for autostartF
          ];  
 };
 }
