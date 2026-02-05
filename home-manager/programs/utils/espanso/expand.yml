@@ -281,7 +281,7 @@ matches:
     label: "run script that lists all running ec2 instances with Owner tag being SimonasJocys"
 
   - trigger: ";in"
-    replace: "--include='*' --exclude='**' "
+    replace: "--exclude='*' --include='*$|$' "
     label: "for aws s3 sync: add include/exclude"
 
   - trigger: ";dr`"

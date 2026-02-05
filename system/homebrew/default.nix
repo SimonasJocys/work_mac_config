@@ -13,7 +13,11 @@ homebrew = {
 
     taps = ["albertlauncher/albert" "nikitabobko/aerospace"]; # repos/complex addons 
     brews = [ # aka Formulas? packages #does this delete packages through nix?
-         "python"
+         "python@3.13"
+        #  probably any of those are not needed, albert installs its own stuff
+        #  "python-tk@3.13"
+        #  "tcl-tk"
+        #  "pillow"
           ]; #installed for albert plugins to work
     casks = [ # GUI or large binaries
         "albert"
