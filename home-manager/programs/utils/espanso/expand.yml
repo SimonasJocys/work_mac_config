@@ -280,7 +280,7 @@ matches:
     replace: "/Users/simon/Desktop/repos/work_mac_config/home-manager/programs/utils/espanso/list_ec2.sh"
     label: "run script that lists all running ec2 instances with Owner tag being SimonasJocys"
 
-  - trigger: ";in"
+  - trigger: ";ex"
     replace: "--exclude='*' --include='*$|$' "
     label: "for aws s3 sync: add include/exclude"
 
