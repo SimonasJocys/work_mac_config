@@ -3,7 +3,7 @@ let
   albert_home = "${config.home.homeDirectory}/Library/Application Support/Albert/python/plugins/";
 #   point to specific version of albert - future updates will brake it 
   albert_brew = "/opt/homebrew/Caskroom/albert/0.31.1/Albert.app/Contents/Resources/python/plugins/";
-  albert_plugin_dir = "Image viewer oryx"; #this has to be the same as md_name
+  albert_plugin_dir = "Image_viewer_oryx"; #this has to be the same as md_name
 
 in
 {
@@ -24,7 +24,7 @@ md_authors = ["you"]
 md_lib_dependencies = ["opencv-python"]
 
 IMAGE_PATH = "/Users/simon/Desktop/repos/work_mac_config/other_assets/keyboard_layout_image/Simonas_moonlander.png"
-WINDOW_NAME = "Image Viewer"
+WINDOW_NAME = "Image Viewer Oryx"
 
 class Plugin(PluginInstance, TriggerQueryHandler):
     def __init__(self):
@@ -35,7 +35,7 @@ class Plugin(PluginInstance, TriggerQueryHandler):
         return [self]
 
     def defaultTrigger(self):
-        return "View image"
+        return "View image oryx" #it seems this have to be unique
 
     def handleTriggerQuery(self, query):
         query.add(StandardItem(

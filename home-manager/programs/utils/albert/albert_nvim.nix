@@ -3,7 +3,7 @@ let
   albert_home = "${config.home.homeDirectory}/Library/Application Support/Albert/python/plugins/";
 #   point to specific version of albert - future updates will brake it 
   albert_brew = "/opt/homebrew/Caskroom/albert/0.31.1/Albert.app/Contents/Resources/python/plugins/";
-  albert_plugin_dir = "Image viewer vim"; #this has to be the same as md_name
+  albert_plugin_dir = "image_viewer_vim"; #this has to be the same as md_name
 
 in
 {
@@ -24,7 +24,7 @@ md_authors = ["you"]
 md_lib_dependencies = ["opencv-python"]
 
 IMAGE_PATH = "/Users/simon/Desktop/repos/work_mac_config/other_assets/nvim_motions/vim-cheatsheet.png"
-WINDOW_NAME = "Image Viewer"
+WINDOW_NAME = "Image Viewer Nixvim"
 
 class Plugin(PluginInstance, TriggerQueryHandler):
     def __init__(self):
@@ -35,7 +35,7 @@ class Plugin(PluginInstance, TriggerQueryHandler):
         return [self]
 
     def defaultTrigger(self):
-        return "View image"
+        return "View image nix" #it seems this have to be unique
 
     def handleTriggerQuery(self, query):
         query.add(StandardItem(
@@ -81,7 +81,7 @@ class Plugin(PluginInstance, TriggerQueryHandler):
 
 # since I cannot add plugins (with home-manager) to homebrew directory, resorting to creating symlinks. Seems to be working 
 # also since macos uses spaces in folders, note quotes for the paths 
-  home.activation.link_albert_oryx = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.link_albert_nvim = lib.hm.dag.entryAfter ["writeBoundary"] ''
   mkdir -p "${albert_brew}/${albert_plugin_dir}"
   ln -sf "${albert_home}/${albert_plugin_dir}/__init__.py" "${albert_brew}/${albert_plugin_dir}/__init__.py"
 '';
