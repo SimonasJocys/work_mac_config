@@ -3,7 +3,7 @@ let
   albert_home = "${config.home.homeDirectory}/Library/Application Support/Albert/python/plugins/";
 #   point to specific version of albert - future updates will brake it 
   albert_brew = "/opt/homebrew/Caskroom/albert/0.31.1/Albert.app/Contents/Resources/python/plugins/";
-  albert_plugin_dir = "Image viewer oryx"; #this has to be the same as md_name
+  albert_plugin_dir = "Image viewer vim"; #this has to be the same as md_name
 
 in
 {
@@ -23,7 +23,7 @@ md_license = "MIT"
 md_authors = ["you"]
 md_lib_dependencies = ["opencv-python"]
 
-IMAGE_PATH = "/Users/simon/Desktop/repos/work_mac_config/other_assets/keyboard_layout_image/Simonas_moonlander.png"
+IMAGE_PATH = "/Users/simon/Desktop/repos/work_mac_config/other_assets/nvim_motions/vim-cheatsheet.png"
 WINDOW_NAME = "Image Viewer"
 
 class Plugin(PluginInstance, TriggerQueryHandler):

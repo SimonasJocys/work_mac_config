@@ -5,5 +5,7 @@
     ./albert_espanso.nix
     ./albert_shortcuts.nix
     ./albert_oryx.nix
+    ./albert_nvim.nix
+
   ];
 }
